@@ -16,31 +16,18 @@ using namespace std;
 #define ring(a, b) for (int i = a; i < b; i++)
 
 int main() {
-        int n ; cin >> n;
-        int sum_x = 0 , sum_y = 0, sum_z = 0;
-        while(n--){
-        int x, y, z; 
-                cin >> x >> y >> z;
-                sum_x += x; sum_y += y;
-                sum_z += z;
-        }
-        if(!sum_x && !sum_y && !sum_z){
-                printf("YES");
-        }
-        else 
-                printf("NO\n");
+	int n;
+	cin >> n;
+	int sum_x = 0, sum_y = 0, sum_z = 0;
+	while (n--) {
+		int x, y, z;
+		cin >> x >> y >> z;
+		sum_x += x;
+		sum_y += y;
+		sum_z += z;
+	}
+	if (!sum_x && !sum_y && !sum_z) {
+		printf("YES");
+	} else
+		printf("NO\n");
 }
-
-/*
-void solve(){
-        int x, y; cin >> x >> y;
-        cout << x + y << '\n';
-        cout << x * y << '\n';
-}
-int main() {
-        int t; cin >> t;
-        while(t--){
-                solve();
-        }
-        return 0;
-}*/
