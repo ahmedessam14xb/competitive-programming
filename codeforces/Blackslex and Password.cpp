@@ -26,11 +26,31 @@ string nxts() {
 #define ring(a, b) for (int i = a; i < b; i++)
 
 int main() {
-	int t;
-	cin >> t;
+	int t = nxti();
 	while (t--) {
-		int k, x;
-		cin >> k >> x;
-		cout << k * x + 1 << '\n';
+		int n = nxti();
+		ll sum = 0;
+		ll arr[n];
+		ring(0, n) { cin >> arr[i]; }
+		ring(1, n) { sum += abs(arr[i] - arr[i - 1]); }
+		ll mx_diff = -1;
+		int mx_index = -1;
+		ring(0, n) {
+			ll diff;
+			if (i == 0) {
+				diff = abs(arr[0] - arr[1]);
+			} else if (i == n - 1) {
+				diff = abs(arr[n - 1] - arr[n - 2]);
+			} else {
+				diff = abs(arr[i] - arr[i - 1]) +
+				       abs(arr[i] - arr[i + 1]) -
+				       abs(arr[i + 1] - arr[i - 1]);
+			}
+			if (diff > mx_diff) {
+				mx_diff = diff;
+				mx_index = i;
+			}
+		}
+		cout << sum - mx_diff << '\n';
 	}
 }
