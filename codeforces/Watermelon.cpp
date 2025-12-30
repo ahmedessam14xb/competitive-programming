@@ -1,17 +1,17 @@
 // problem name: Watermelon
-// problem link: https://codeforces.com/problemset/problem/4/A
+// problem link: https://codeforces.com/contest/4/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
 int nxti() {
-  int x;
-  cin >> x;
-  return x;
+	int x;
+	cin >> x;
+	return x;
 }
 string nxts() {
-  string x;
-  cin >> x;
-  return x;
+	string x;
+	cin >> x;
+	return x;
 }
 #define intmaxx INTMAX_MAX
 #define intminn INTMAX_MIN
@@ -26,9 +26,9 @@ string nxts() {
 #define ring(a, b) for (int i = a; i < b; i++)
 
 int main() {
-  int w = nxti();
-  if (w & 1 or w == 2)
-    cout << "NO\n";
-  else
-    cout << "YES\n";
+	int w = nxti();
+	if (w & 1 or w == 2)
+		cout << "NO\n";
+	else
+		cout << "YES\n";
 }
