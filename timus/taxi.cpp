@@ -1,3 +1,5 @@
+// problem name: Taxi
+// problem link: https://acm.timus.ru/problem.aspx?space=1&num=1607
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -18,17 +20,17 @@ using namespace std;
 #define ln puts("");
 
 void solve() {
-  int a, b, c, d;
-  cin >> a >> b >> c >> d;
-  while (a < c) {
-    a += b;
-    if (c <= a) {
-      printf("%d\n", c);
-      return;
-    }
-    c -= d;
-  }
-  printf("%d\n", a);
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	while (a < c) {
+		a += b;
+		if (c <= a) {
+			printf("%d\n", c);
+			return;
+		}
+		c -= d;
+	}
+	printf("%d\n", a);
 }
 
 int main() { solve(); }
